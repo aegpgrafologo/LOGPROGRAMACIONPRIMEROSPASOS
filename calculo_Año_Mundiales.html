@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<h1>CALCULO AÑOS MUNDIALES DE FUTBOL</h1>
+<script>
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea();
+    }
+var anhoMundial = 1930;
+var limite = parseInt(prompt("Ingrese el año limite a calcular"));
+//Se usa el while para repetir las iteraciones, sin tener que repetir código.
+    while(anhoMundial <= limite) {
+        imprimir("Hubo mundial de fútbol en el año " + anhoMundial);
+        anhoMundial = anhoMundial + 4;
+    }
+    imprimir ("***FIN***")
+</script>

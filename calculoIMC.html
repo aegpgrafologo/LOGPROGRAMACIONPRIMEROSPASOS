@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA CALCULAR IMC</h1>
+<script>
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea();
+    }
+    /*
+    function calcularImc(peso,altura) {
+        imc = peso / (altura * altura);
+        return(imc);    
+    }
+    pesoAnyelo = 102
+    alturaAnyelo = 1.86
+    */
+    /*function calcularImc(peso,altura,nombre) {
+        imc = peso / (altura * altura);
+        imprimir("El IMC calculado de " + nombre + " es: " + imc);
+    }
+    calcularImc(102,1.86,"Anyelo");*/  
+    /*pesoAnyelo = 102
+    alturaAnyelo = 1.86
+    //imcAnyelo = pesoAnyelo / (alturaAnyelo * alturaAnyelo)
+    imcAnyelo = calcularImc(pesoAnyelo,alturaAnyelo);
+    imprimir("El IMC de Anyelo es: " + imcAnyelo);
+    */
+   //interacción con el usuario
+   function calcularImc(peso,altura) {
+        return (peso / (altura * altura));
+    }
+    nombre = prompt("Informe su nombre");
+    pesoInformado = prompt("Informe su peso"); 
+    alturaInformada = prompt("Informe su altura");
+    
+    imcCalculado = calcularImc(pesoInformado,alturaInformada);
+    
+    imprimir(nombre + ", El IMC calculado es: " + imcCalculado);
+
+    if(imcCalculado < 18.5){
+        imprimir("IMC Abajo de lo recomendado");    
+    }
+    if(imcCalculado >= 18.5){
+        if(imcCalculado<25){
+            imprimir("IMC Normal");
+        }    
+    }
+    if(imcCalculado >= 25){
+        if(imcCalculado<30){
+            imprimir("IMC considerado como Sobrepeso");
+        }    
+    }
+    if(imcCalculado >= 30){
+        imprimir("IMC Considerado como Obesidad");    
+    }
+</script>

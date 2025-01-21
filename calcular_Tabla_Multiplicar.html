@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<h1>CALCULAR TABLAS DE MULTIPLICAR</h1>
+<script>
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea();
+    }
+var multiplicador = 1;
+var limite = parseInt(prompt("Ingrese el número limite a calcular"));
+imprimir("WHILE")
+//Se usa el while para repetir las iteraciones, sin tener que repetir código.
+    while(multiplicador <= 10) {
+        imprimir(limite * multiplicador);
+//Tambien puede usarse "multiplicador++", es lo mismo.        
+        multiplicador = multiplicador + 1;
+    }
+    imprimir ("***FIN***")
+imprimir("FOR")
+// Tiene un uso similar al WHILE, sirve para repetir las iteraciones, varia la sintazxis.
+    for(var multiplicador = 1; multiplicador <= 10; multiplicador = multiplicador + 1) {
+        imprimir(limite * multiplicador);
+    }
+    imprimir ("***FIN***")
+
+</script>
